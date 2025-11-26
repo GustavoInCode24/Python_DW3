@@ -2,7 +2,7 @@ astronauta = input("Nome do astronauta: ")
 sup = ["Comida", "Agua", "Oxigênio", "Roupas", "Equipamento"]
 peso = [250, 100, 300, 150, 300]
 
-#Cargas
+
 carga_max = 1000
 carga_atual = 0
 
