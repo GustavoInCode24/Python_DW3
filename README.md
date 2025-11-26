@@ -21,7 +21,7 @@
 - **`requirements.txt`** – Dependências externas (quando necessário).
 
 ```
-Nome-do-Repositorio/
+Python-DW3/
 ├── Poo_Python/                     # 📚 Pasta dedicada à Programação Orientada a Objetos em Python.
 ├── Projeto-Final-de-Python/        # 🏆 Pasta contendo o código do Projeto Final de Python.
 ├── introducao_Python/              # 🚀 Pasta com conteúdo de introdução ao Python.
