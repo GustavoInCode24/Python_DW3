@@ -20,6 +20,14 @@
 - **`LICENSE`** – Licença MIT.  
 - **`requirements.txt`** – Dependências externas (quando necessário).
 
+```
+Nome-do-Repositorio/
+├── Poo_Python/                     # 📚 Pasta dedicada à Programação Orientada a Objetos em Python.
+├── Projeto-Final-de-Python/        # 🏆 Pasta contendo o código do Projeto Final de Python.
+├── introducao_Python/              # 🚀 Pasta com conteúdo de introdução ao Python.
+└── README.md                       # 📄 Arquivo de documentação principal do projeto.
+````
+
 ## Objetivo Pedagógico
 O repositório visa reforçar o aprendizado de Python, permitindo prática ativa dos conceitos teóricos, consolidando o conhecimento em programação e servindo como referência para projetos futuros.
 
