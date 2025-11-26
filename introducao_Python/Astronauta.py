@@ -1,54 +1,41 @@
-def main():
-  
-    capacidade_max = 1000
-    carga_atual = 0
+astronauta = input("Nome do astronauta: ")
+sup = ["Comida", "Agua", "Oxigênio", "Roupas", "Equipamento"]
+peso = [250, 100, 300, 150, 300]
 
-    suprimentos = {
-        "comida": 200,
-        "água": 100,
-        "oxigênio": 300,
-        "ferramentas": 250,
-        "remédios": 150
-    }
+#Cargas
+carga_max = 1000
+carga_atual = 0
 
-   
-    nome = input("Digite o nome do astronauta: ")
-
-    print("\n--- Lista de suprimentos disponíveis ---")
-    for item, peso in suprimentos.items():
-        print(f"- {item.capitalize()} ({peso} kg)")
-    print("---------------------------------------\n")
+print(astronauta)
 
 
-    while True:
-        escolha = input("Escolha um suprimento (ou digite 'fim' para encerrar): ").lower()
+i = 1
+for item in sup:
+    print(i, "-", item)
+    i+=1
 
-        if escolha == "fim":
-            break
+while True:
+    escolha_sup = input("Escolha seus suprimentos: ")
 
-        if escolha in suprimentos:
-            peso_item = suprimentos[escolha]
+    if escolha_sup.lower() == 'fim':
+        break
 
-            # Verifica se ainda cabe na nave
-            if carga_atual + peso_item <= capacidade_max:
-                carga_atual += peso_item
-                print(f"{escolha.capitalize()} adicionado! Carga atual: {carga_atual} kg")
+    if escolha_sup.isdigit():
+        escolha_sup = int(escolha_sup)
+        if escolha_sup >= 1 and escolha_sup <= 5:
+            indice = escolha_sup - 1
+            if carga_atual + peso[indice] <= carga_max:
+                carga_atual += peso[indice]
+                print("Levando ",sup[indice]," - Peso: ",peso[indice],"kg.")
             else:
-                print(f" Não há espaço suficiente para adicionar {escolha}!")
+                print("Não há espaço suficiente para carregar este suprimento!")
         else:
-            print(" Suprimento inválido! Escolha um da lista.")
+            print("Escolha inválida")
+    else:
+        print("Entrada inválida. Digite um número de 1 a 5 ou 'Fim' para encerrar.")
 
-  
-    espaco_restante = capacidade_max - carga_atual
+espaco_sobra = carga_max - carga_atual
 
-
-    print("\n--- Resumo da Missão ---")
-    print(f"Astronauta: {nome}")
-    print(f"Carga utilizada: {carga_atual} kg")
-    print(f"Espaço restante: {espaco_restante} kg")
-    print("-------------------------")
-
-
-
-if __name__ == "__main__":
-    main()
+print("\nAstronauta: ",astronauta)
+print("Carga: ",carga_atual)
+print("Espaço restante: ", espaco_sobra)
